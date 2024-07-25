@@ -1,0 +1,26 @@
+﻿@model IEnumerable<HomeWork1.Entities.Drink>
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        @*<a href="Drinks">Drinks</a>
+        <a href="Hotmeals">Hotmeals</a>
+        <a href="Fastfoods">Fastfoods</a>
+        <a href="Foods">All food</a>*@
+
+        <h1>We have @Model.Count() drinks</h1>
+        @foreach (var item in Model)
+        {
+            <hr />
+            <h2>Id: @item.Id</h2>
+            <h2>Name: @item.Name</h2>
+            <h2>Price: @item.Price</h2>
+        }
+    </body>
+</html>

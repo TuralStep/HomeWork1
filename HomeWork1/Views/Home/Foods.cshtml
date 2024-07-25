@@ -1,0 +1,52 @@
+﻿@model HomeWork1.Models.FoodsViewModel
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h3{
+                margin-left:8%
+            }
+        </style>
+    </head>
+
+    <body>
+
+        @*<a href="Drinks">Drinks</a>
+        <a href="Hotmeals">Hotmeals</a>
+        <a href="Fastfoods">Fastfoods</a>
+        <a href="Foods">All food</a>*@
+
+        <h1>These are our foods</h1>
+
+        <h2>Drinks</h2>
+        @foreach (var item in @Model.Drinks)
+        {
+            <hr />
+            <h3>Id: @item.Id</h3>
+            <h3>Name: @item.Name</h3>
+            <h3>Price: @item.Price</h3>
+        }
+
+        <h2>Hotmeals</h2>
+        @foreach (var item in @Model.Hotmeals)
+        {
+            <hr />
+            <h3>Id: @item.Id</h3>
+            <h3>Name: @item.Name</h3>
+            <h3>Description: @item.Description</h3>
+            <h3>Price: @item.Price</h3>
+        }
+
+        <h2>Fastfoods</h2>
+        @foreach (var item in @Model.Fastfoods)
+        {
+            <hr />
+            <h3>Id: @item.Id</h3>
+            <h3>Name: @item.Name</h3>
+            <h3>Description: @item.Description</h3>
+            <h3>Price: @item.Price</h3>
+        }
+
+    </body>
+</html>
